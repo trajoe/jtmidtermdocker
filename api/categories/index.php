@@ -9,7 +9,7 @@ if ($method === 'OPTIONS') {
     exit();
 }
 
-include once '../../congig/Database.php';
+include once '../../config/Database.php';
     include once '../../models/Category.php';
     include once '../../models/Author.php';
     include once '../../functions/isValid.php';

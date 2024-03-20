@@ -9,7 +9,7 @@
         exit();
     }
     
-    include once '../../congig/Database.php';
+    include once '../../config/Database.php';
     include once '../../models/Author.php';
     include once '../../functions/isValid.php';
     include once '../../functions/fail.php';
