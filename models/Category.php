@@ -132,7 +132,7 @@ function delete(){
     if ($stmt->execute()) {
         return true;
     }
-
+    //error handling
       printf("Error: %s.\n", $stmt->error);
         return false;
 }
