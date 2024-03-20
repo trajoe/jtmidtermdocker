@@ -13,6 +13,6 @@ externalPort = 80
 
 [deployment]
 
-run = ["sh", "-c", "php = S 0.0.0.0:8000 -t ."]
+run = ["php", "-S", "0.0.0.0:8000", "-t", ".", "index.php"]
 
 deploymentTarget = "cloudrun"
