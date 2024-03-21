@@ -149,9 +149,9 @@ return $stmt;
 function read_single() {
   $query = 'SELECT q.id, q.quote, a.author, c.category, a.id AS "authorId", c.id AS "categoryId"
   FROM ' . $this->table . ' q
-  LEFT JOIN authors a on  q.authorId = a.id
-  LEFT JOIN categories c on q.categoryId = c.id
-  WHERE q.id = :id;';
+  LEFT JOIN authors a ON  q.authorId = a.id
+  LEFT JOIN categories c ON q.categoryId = c.id
+  WHERE q.id = :id';
 
 //prepare
 
@@ -175,6 +175,16 @@ if($row){
   $this->theCategory= $row['category'];
   $this->authorId= $row['authorId'];
   $this->categoryId= $row['categoryId'];
+
+  $quote_item = array(
+    "id" => $this->id,
+    "quote" => $this->theQuote,
+    "author" => $this->theAuthor,
+    "category" => $this->theCategory
+);
+
+return json_encode($quote_item);
+
 
 }
 
